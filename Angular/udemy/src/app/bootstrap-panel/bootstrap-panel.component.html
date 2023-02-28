@@ -1,0 +1,9 @@
+<!-- We can use ng-content instead of input properties to pass complex markup to our child component -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <ng-content select=".myHeading"></ng-content>
+    </div>
+    <div class="panel-body">
+        <ng-content select=".myBody"></ng-content>
+    </div>
+</div>
