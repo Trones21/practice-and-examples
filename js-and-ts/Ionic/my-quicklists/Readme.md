@@ -1,0 +1,1 @@
+Be careful, don't get confused between checklist and checklist-list components
