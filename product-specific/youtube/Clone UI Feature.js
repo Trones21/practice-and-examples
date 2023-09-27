@@ -3,6 +3,8 @@
 //Clone node, clean/update node (remove listeners, text images, etc, and add your own) and append??
 ///////////////
 
+//This might actually be kinda difficult b/c it takes time to understand the exact strcuture of their elements -- it's easier to just make your own, then maybe apply some of the styling?
+
 //Get the insertion point
 let popup = Array.from(document.querySelectorAll('.ytd-popup-container')).filter( i => i.localName == 'ytd-add-to-playlist-renderer')[0]
 let parentDiv = popup.querySelector('#header')

@@ -1,0 +1,5 @@
+Working Process:
+
+Copy and paste playlist search and sort into snippets
+copy back out to vscode + git commit / push
+clean snippets when done for the day
