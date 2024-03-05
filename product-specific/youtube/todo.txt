@@ -1,5 +1,4 @@
-Working Process:
 
-Copy and paste playlist search and sort into snippets
-copy back out to vscode + git commit / push
-clean snippets when done for the day
+
+Redo entire project with a custom UI and the oauth found here:
+https://console.cloud.google.com/apis/credentials/consent?project=playlist-organizer-412902

@@ -14,10 +14,6 @@ namespace answers{
                 key = str2;
                 check = str1;
             }
-            //Shortcut
-            if(check.length() % key.length() != 0){
-                return "";
-            }
 
             for(auto i = 0; i < check.length(); i=i+key.length()){
                 string chunk = 

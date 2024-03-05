@@ -6,24 +6,26 @@ class Node {
     }
 }
 
-let binaryTree = new Node(1);
-binaryTree.left = new Node(2);
-binaryTree.left.left = new Node(4);
-binaryTree.left.left.left = new Node(8);
-binaryTree.left.left.right = new Node(9);
-binaryTree.left.right = new Node(5);
-binaryTree.right = new Node(3);
-binaryTree.right.left = new Node(6);
-binaryTree.right.right = new Node(7);
+function insertNode(root, value) {
+    if (root === null) {
+        return new Node(value);
+    }
+
+    if (value < root.value) {
+        root.left = insertNode(root.left, value);
+    } else {
+        root.right = insertNode(root.right, value);
+    }
+
+    return root;
+}
 
 //Stack overflow Question - How can I avoid making this global,
 //why isn't it in the scope of the calling function, shouldn't it?
-//let allNodes = [];
-//PreOrderTraversal
 function PreOrderTraversal(binaryTree) {
     let allNodes = [];
     doWork(binaryTree)
-    console.log(allNodes)
+    return allNodes
 
 function doWork(node) {
         //node - leftsubtree - rightsubtree
@@ -39,10 +41,12 @@ function doWork(node) {
     }
 }
 
+
+//in order traversals come out sorted on BSTs
 function InOrderTraversal(binaryTree) {
     let allNodes = [];
     doWork(binaryTree)
-    console.log(allNodes)
+    return allNodes
 
 function doWork(node) {
         //node - leftsubtree - rightsubtree            
@@ -57,12 +61,13 @@ function doWork(node) {
         }
     }
 }
+
 
 
 function PostOrderTraversal(binaryTree) {
     let allNodes = [];
     doWork(binaryTree)
-    console.log(allNodes)
+    return allNodes
 
 function doWork(node) {
         //node - leftsubtree - rightsubtree            
@@ -79,6 +84,13 @@ function doWork(node) {
 }
 
 
-PreOrderTraversal(binaryTree);
-InOrderTraversal(binaryTree);
-PostOrderTraversal(binaryTree);
+let BST = null;
+insertNode(BST, 4);
+insertNode(BST, 7);
+insertNode(BST, 2);
+insertNode(BST, 15);
+
+
+PreOrderTraversal(BST);
+InOrderTraversal(BST);
+PostOrderTraversal(BST);
