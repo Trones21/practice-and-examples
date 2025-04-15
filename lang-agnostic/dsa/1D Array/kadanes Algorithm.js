@@ -14,3 +14,11 @@ function kadanesAlgorithm(array) {
 let x = kadanesAlgorithm([3, 5, -1, 4]);
 
 console.log(x)
+
+
+Kadane’s is based on a core idea from dynamic programming:
+
+At every position, the best subarray ending here is either:
+
+ - The current value by itself (start over), or
+ - The previous best subarray extended by this value (continue the streak)
